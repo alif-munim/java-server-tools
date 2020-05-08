@@ -32,5 +32,7 @@
 <input type="submit" value="Send">
 </form>
 
+<%= request.getParameter("passedParam") %><br>
+
 </body>
 </html>
