@@ -28,8 +28,24 @@ task hello {
 	doLast { println "$greeting from the execution phase!" }
 }
 
+task run(type: JavaExec, dependsOn: classes) {
+	main "com.alifmunim.Main"
+	classpath sourceSets.main.runtimeClasspath
+	args "Hello World"
+}
+
 task runJar(type: Exec, dependsOn: "jar") {
 	executable "java"
 	args "-jar", "$jar.archivePath", "Hello World"
 	
+}
+
+task boolTask {
+	onlyIf { true }
+	doLast { println "True!" }
+} 
+
+task writeGreeting {
+	outputs.file file("greeting.txt")
+	doLast { file("greeting.txt").text = "Hello, reader.\n" }
 }
