@@ -6,6 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>kafka-project</artifactId>
+
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -61,7 +62,6 @@
             <artifactId>json</artifactId>
             <version>20200518</version>
         </dependency>
-
 
     </dependencies>
 
