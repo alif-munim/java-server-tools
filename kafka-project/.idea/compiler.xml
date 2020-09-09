@@ -8,8 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="kafka-producer-twitter" />
         <module name="kafka-basics" />
-        <module name="kafka-project" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kafka-twitter" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
